@@ -1,165 +1,111 @@
-.flex{
-    display: flex;
+.header {
 }
 
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-   
+.logo {
+  color: #fafafa;
 }
 
-.header-div{
-    position: relative;
-    display: flex;
-    margin-top: 30px;
-    /* width: 1440px; */
-    height: 80px;
-    /* gap: 487px; */
-    
+.logo:hover,
+.logo:focus {
+  color: #ed3b44;
 }
 
-.logo-name{
-    margin: 0;
-    color: #FAFAFA;
+.menu-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 487px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fafafa;
 }
 
-.img-logo{
-    margin-right: 8px;
-    border-radius: 20px;
-    width: 80px;
-    height: 80px;
+.menu-button:hover,
+.menu-button:focus {
+  color: #ed3b44;
 }
-.logo{
-    cursor: pointer;
+
+.menu-div {
+  height: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ankors-menu {
+  margin-top: 16px;
+  white-space: nowrap;
+  padding: 0;
+  width: auto;
+  list-style: none;
+  color: #fafafa;
+}
+
+.acnkorLink {
+  margin-top: 5px;
+}
+
+.acnkorLink:hover,
+.acnkorLink:focus {
+  color: #ed3b44;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .header .order-link-primary {
+    display: none;
   }
-  
-.logo-name:hover, .logo-name:focus{
-      color: #ed3b44;
- }
+  .burger-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
 
- .menu-button{
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+  .menu-burger-button {
+    height: 28px;
+    width: 28px;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     border: none;
-    padding: 0;
-    margin-top: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 487px;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fafafa;
-}
-
-
-.menu-button:hover, .menu-button:focus{
-    color: #ed3b44;
-}
-
-.menu-div{
-height: 10px;
-flex-direction: column;
-text-align: center;
-}
-
-.ankors-menu{
-    margin-top: 16px;
-    white-space: nowrap;
-    padding: 0;
-    width: auto;
-    list-style: none;
-    color: #FAFAFA;
-}
-
-
-.acnkorLink{
-    margin-top: 5px;
-}
-
-.acnkorLink:hover, .acnkorLink:focus{
-    color: #ed3b44;
-    cursor: pointer
-}
-
-
-.is-hidden{
-    opacity: 0;
-    pointer-events: none;
-    overflow: hidden;
-    pointer-events: none;   
-    visibility: hidden;
   }
 
-  .order-button{
-    white-space: nowrap;
-    background: none;
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 60px;
-    padding: 18px 36px;
-    height: 55px;
-    font-weight: 500;
-    font-size: 16px;
-    color: #fafafa;
- } 
+  .menu-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 
- .order-button:hover, .order-button:focus{
-    background: #ed3b44;
- }
+  .ankors-menu {
+    display: block;
+  }
+}
 
-    @media screen and (max-width: 767px) {
-     .burger-menu-container{
-        position: absolute;
-        position: relative;
-        display: none;
-
-        top: 100%;
-        /* left: 0; */
-        width: 100%;
-        z-index: 999;
-
-        padding: 60px;
-        text-align: center;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
-        0px 4px 8px rgba(0, 0, 0, 0.04);
-
-     }
-     .menu-burger-button{
-        position: absolute;
-        padding: 0;
-        /* display: none; */
-        flex-direction: column;
-        height: 28px;
-        width: 28px;
-        background: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-        /* border: 0; */
-        
-     }
-    
-     .menu-button{
-        display: none;
-     }
-
-     .ankors-menu{
-      display: block;
-    }
-    }
-  
-    @media screen and (min-width: 768px) {
-        .menu-burger-button{
-            display: none;
-        }
-    }
-  
-    @media screen and (min-width: 1200px) {
- 
-    }
-  
-   
+@media screen and (min-width: 768px) {
+  .menu-burger-button {
+    display: none;
+  }
+}
