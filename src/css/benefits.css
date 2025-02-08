@@ -40,12 +40,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 32px;
 }
 
 @media only screen and (min-width: 768px) {
   .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 64px;
   }
 }
 @media only screen and (min-width: 1440px) {
