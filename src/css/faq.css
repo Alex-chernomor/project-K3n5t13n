@@ -36,8 +36,6 @@
 
   border-left: none;
   border-right: none;
-  /*
-  border: none;*/
   transition: background-color 0.4s ease-out;
   display: flex;
   flex-direction: column;
