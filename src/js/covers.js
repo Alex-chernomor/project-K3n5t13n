@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const coversImages = [
     { href: '../img/imgJPEG/coversImg/coversImg1.jpg', alt: 'PowerPulse' },
@@ -55,3 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(coversSection);
 });
+
