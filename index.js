@@ -37,5 +37,5 @@
                     <h3 class="review-author">${s.author}</h3>
                     <p class="review-text">"${s.review}"</p>
                 </li>
-            `).join(""),new Swiper(".swiper",{slidesPerView:1,spaceBetween:0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},keyboard:{enabled:!0,onlyInViewport:!0},grabCursor:!0,centeredSlides:!1,loop:!1,breakpoints:{768:{slidesPerView:2,slidesPerGroup:2,spaceBetween:16},1440:{slidesPerView:4,slidesPerGroup:2,spaceBetween:16}}})}catch(o){console.error(o),t.style.display="block",e.style.display="none"}});
+            `).join(""),new Swiper(".swiper",{slidesPerView:1,spaceBetween:0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},keyboard:{enabled:!0,onlyInViewport:!0},grabCursor:!0,centeredSlides:!1,loop:!1,breakpoints:{768:{slidesPerView:2,slidesPerGroup:2,spaceBetween:16},1440:{slidesPerView:4,slidesPerGroup:2,spaceBetween:10}}})}catch(o){console.error(o),t.style.display="block",e.style.display="none"}});
 //# sourceMappingURL=index.js.map
