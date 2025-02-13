@@ -70,7 +70,7 @@ const createProjectEl = obj => {
 const createProjectTemplate = arr =>
   arr.map(el => createProjectEl(el)).join('');
 
-const addProjctTemplate = template =>
+const addProjectTemplate = template =>
   projectList.insertAdjacentHTML('beforeend', template);
 
-addProjctTemplate(createProjectTemplate(projectsArr));
+addProjectTemplate(createProjectTemplate(projectsArr));
