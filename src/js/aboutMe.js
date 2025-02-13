@@ -1,17 +1,7 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-=======
 import heroimg from '../img/imgJPEG/aboutMe/heroImg.jpg';
->>>>>>> Stashed changes
-=======
-import heroimg from '../img/imgJPEG/aboutMe/heroImg.jpg';
->>>>>>> Stashed changes
-=======
-import heroimg from '../img/imgJPEG/aboutMe/heroImg.jpg';
->>>>>>> Stashed changes
 
 document.addEventListener('DOMContentLoaded', () => {
   const aboutMeArray = [
@@ -61,30 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('li');
       card.classList.add('my-description-about-me');
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     const button = document.createElement('button');
     button.innerHTML = `<span><svg width='40px' height='40px'><use href='../img/imgSVG/sprite.svg#arrowUp'></use></svg></span>`;
 
     const descriptionDiv = document.createElement('div');
     descriptionDiv.classList.add('div-description');
     descriptionDiv.style.display = 'none';
-=======
+
       const title = document.createElement('p');
       title.classList.add('el-name-about-me');
       title.innerText = item.title;
->>>>>>> Stashed changes
-=======
-      const title = document.createElement('p');
-      title.classList.add('el-name-about-me');
-      title.innerText = item.title;
->>>>>>> Stashed changes
-=======
-      const title = document.createElement('p');
-      title.classList.add('el-name-about-me');
-      title.innerText = item.title;
->>>>>>> Stashed changes
+
 
       const button = document.createElement('button');
       button.innerHTML = `<svg width='40px' height='40px'><use href='../img/imgSVG/sprite.svg#arrowUp'></use></svg>;
@@ -124,9 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     button.addEventListener('click', () => {
       card.classList.toggle('active');
       const arrow = button.querySelector('svg use');
@@ -139,15 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       descriptionDiv.style.display = isActive ? 'block' : 'none';
     });
-=======
+
   createCards();
->>>>>>> Stashed changes
-=======
-  createCards();
->>>>>>> Stashed changes
-=======
-  createCards();
->>>>>>> Stashed changes
+
 
   const containerTwo = document.querySelector('.skills-slider-about-me');
 
@@ -179,27 +147,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   swiperContainer.appendChild(skillsList);
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 const nextButton = document.createElement('div');
 nextButton.classList.add('swiper-button-next-about-me');
 nextButton.innerHTML = `<span><svg width='40px' height='40px'><use href='../img/imgSVG/sprite.svg#arrowRight'></use></svg></span>`;
-=======
+
   const nextButton = document.createElement('div');
   nextButton.classList.add('swiper-button-next-about-me');
   nextButton.innerHTML = `<button class="button"><svg width='40px' height='40px'><use href='./img/imgSVG/sprite.svg#arrowRight'></use></svg></button>`;
->>>>>>> Stashed changes
-=======
-  const nextButton = document.createElement('div');
-  nextButton.classList.add('swiper-button-next-about-me');
-  nextButton.innerHTML = `<button class="button"><svg width='40px' height='40px'><use href='./img/imgSVG/sprite.svg#arrowRight'></use></svg></button>`;
->>>>>>> Stashed changes
-=======
-  const nextButton = document.createElement('div');
-  nextButton.classList.add('swiper-button-next-about-me');
-  nextButton.innerHTML = `<button class="button"><svg width='40px' height='40px'><use href='./img/imgSVG/sprite.svg#arrowRight'></use></svg></button>`;
->>>>>>> Stashed changes
+
 
   swiperContainer.appendChild(nextButton);
 
