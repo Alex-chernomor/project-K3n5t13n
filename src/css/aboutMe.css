@@ -384,6 +384,7 @@ button {
     width: 612px;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     height: auto;
     margin-right: 68px;
     margin-left: auto;
@@ -394,6 +395,12 @@ button {
     margin-bottom: 32px;
 =======
 =======
+=======
+  }
+
+  .skills-slider-about-me {
+    margin: 0 32px;
+>>>>>>> Stashed changes
   }
 
   .skills-slider-about-me {
