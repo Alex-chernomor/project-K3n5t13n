@@ -35,14 +35,14 @@ const projectsArr = [
     projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
     img: projectImgOne,
   },
-  {
-    projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
-    img: projectImgTwo,
-  },
-  {
-    projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
-    img: projectImgThree,
-  },
+  // {
+  //   projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
+  //   img: projectImgTwo,
+  // },
+  // {
+  //   projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
+  //   img: projectImgThree,
+  // },
 ];
 
 const projectList = document.querySelector('.projects-list');
