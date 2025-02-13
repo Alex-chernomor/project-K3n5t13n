@@ -15,7 +15,6 @@
 // });
 // // console.log(Swiper);
 
-
 // const swiper = new Swiper('.swiper-container', {
 //     loop: true, // Циклический слайдер (он будет повторяться)
 //     slidesPerView: 1, // Количество слайдов на одном экране
@@ -27,28 +26,29 @@
 //     speed: 500,  // Скорость переключения слайдов
 //   });
 
-
-
+// import projectImgOne from '../img/imgJPEG/projectImg/projectImg1.jpg';
+// import projectImgTwo from '../img/imgJPEG/projectImg/projectImg2.jpg';
+// import projectImgThree from '../img/imgJPEG/projectImg/projectImg3.jpg';
 
 // const projectsArr = [
-//     {
-//         projectName:'Programming Across Borders: Ideas, Technologies, Innovations',
-//         img:'../img/imgJPEG/projectImg/projectImg1.jpg'
-//     },
-//     {
-//         projectName:'Programming Across Borders: Ideas, Technologies, Innovations',
-//         img:'../img/imgJPEG/projectImg/projectImg2.jpg'
-//     },
-//     {
-//         projectName:'Programming Across Borders: Ideas, Technologies, Innovations',
-//         img:'../img/imgJPEG/projectImg/projectImg3.jpg'
-//     }
+//   {
+//     projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
+//     img: projectImgOne,
+//   },
+//   {
+//     projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
+//     img: projectImgTwo,
+//   },
+//   {
+//     projectName: 'Programming Across Borders: Ideas, Technologies, Innovations',
+//     img: projectImgThree,
+//   },
 // ];
 
 // const projectList = document.querySelector('.projects-list');
 
-// const createProjectEl = obj =>{
-//     return`
+// const createProjectEl = obj => {
+//   return `
 //     <div class='project-link-container'>
 //         <div class='proj-link-container'>
 //             <ul class='skill-proj-list'>
@@ -64,12 +64,13 @@
 //             <img class = 'project-image'src="${obj.img}" alt="${obj.projectName}">
 //         </div>
 //     </div>
-//     `
+//     `;
 // };
 
+// const createProjectTemplate = arr =>
+//   arr.map(el => createProjectEl(el)).join('');
 
-// const createProjectTemplate = arr => arr.map(el=>createProjectEl(el)).join('');
-
-// const addProjctTemplate = template => projectList.insertAdjacentHTML('beforeend', template);
+// const addProjctTemplate = template =>
+//   projectList.insertAdjacentHTML('beforeend', template);
 
 // addProjctTemplate(createProjectTemplate(projectsArr));
