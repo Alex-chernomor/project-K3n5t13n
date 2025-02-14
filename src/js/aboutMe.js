@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function createCards() {
     const container = document.querySelector('.about-me-list');
 
-    aboutMeArray.forEach(item => {
+    aboutMeArray.forEach((item, index) => {
       const card = document.createElement('li');
       card.classList.add('my-description-about-me');
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title.innerText = item.title;
 
       const button = document.createElement('button');
-      button.innerHTML = `<svg width='40px' height='40px'><use href='${pathArrow}#arrowUp'></use></svg>`;
+      button.innerHTML = `<svg width='40px' height='40px'><use href='${pathArrow}#arrowDown'></use></svg>`;
 
       const descriptionDiv = document.createElement('div');
       descriptionDiv.classList.add('div-description');
@@ -89,6 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
       card.appendChild(descriptionDiv);
 
       container.appendChild(card);
+
+      if (index === 0) {
+        card.classList.add('active');
+        button
+          .querySelector('svg use')
+          .setAttribute('href', `${pathArrow}#arrowUp`);
+        descriptionDiv.style.display = 'block';
+      }
     });
   }
 
