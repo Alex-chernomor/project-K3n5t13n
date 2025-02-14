@@ -157,10 +157,7 @@ button {
     padding-right: 16px;
   }
   .container-about-me {
-<<<<<<< Updated upstream
-=======
     margin-top:64px;
->>>>>>> Stashed changes
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -158,11 +158,7 @@
     .swiper-button-prev svg,
     .swiper-button-next svg {
         width: 68px !important;
-<<<<<<< Updated upstream
-        height: px !important;
-=======
         height: 68px !important;
->>>>>>> Stashed changes
     }
 
 }
@@ -175,11 +171,7 @@
 
     }
 
-<<<<<<< Updated upstream
-    .swiper {
-=======
         #reviews .swiper {
->>>>>>> Stashed changes
         width: 100%;
         max-width: 1376px;
         overflow: hidden;
