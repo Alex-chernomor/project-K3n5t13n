@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: coversImg10, alt: 'StarlightStudio' }
   ];
 
-  const rows = [1, 2, 3, 4].map(n => document.getElementById(row${n}));
+  const rows = [1, 2, 3, 4].map(n => document.getElementById('row${n}'));
 
   function createCoverItem({ src, alt }) {
     return `
