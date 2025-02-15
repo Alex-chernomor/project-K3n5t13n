@@ -1,19 +1,11 @@
 :root {
-  /* Шрифты: */
-  font-family: 'Inter', sans-serif;
-  /* hover: */
-  --light-crimson: #ed3b44;
-  /* color-button: */
+    font-family: 'Inter', sans-serif;
+  --light-crimson: #ed3b44; 
   --dark-crimson: #e0373f;
-  /* background */
   --dark: #1c1d20;
-  /* Cards: */
-  --dark-gray: #242527;
-  /* Array/logo: */
+  --dark-gray: #242527; 
   --gray: #3b3b3b;
-  /* For links and etc */
   --white: #fafafa;
-  /* Success: */
   --green: #3cbc81;
 }
 
