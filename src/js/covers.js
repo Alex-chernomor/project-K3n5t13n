@@ -8,8 +8,6 @@ import coversImg7 from '../img/imgJPEG/coversImg/coversImg7.jpg';
 import coversImg8 from '../img/imgJPEG/coversImg/coversImg8.jpg';
 import coversImg9 from '../img/imgJPEG/coversImg/coversImg9.jpg';
 import coversImg10 from '../img/imgJPEG/coversImg/coversImg10.jpg';
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const coversImages = [
     { src: coversImg1, alt: 'PowerPulse' },
@@ -23,9 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: coversImg9, alt: 'englishexcellence' },
     { src: coversImg10, alt: 'StarlightStudio' }
   ];
-
-  const rows = [1, 2, 3, 4].map(n => document.getElementById('row${n}'));
-
+  const rows = [1, 2, 3, 4].map(n => document.getElementById(`row${n}`));
   function createCoverItem({ src, alt }) {
     return `
       <li class="covers-item">
@@ -35,44 +31,35 @@ document.addEventListener('DOMContentLoaded', () => {
       </li>
     `;
   }
-
   function addImagesToRow(row, images, isOrdered) {
     let usedImages = [];
     let rowContent = '';
-
     if (isOrdered) {
       images.forEach(image => {
         rowContent += createCoverItem(image);
       });
     } else {
       const shuffledImages = [...images].sort(() => 0.5 - Math.random());
-
       shuffledImages.forEach(image => {
         if (usedImages.includes(image.src)) return;
-
         rowContent += createCoverItem(image);
         usedImages.push(image.src);
       });
-
       usedImages.forEach(src => {
         if (usedImages.includes(src)) return;
         rowContent += createCoverItem({ src, alt: '' });
       });
     }
-
     row.innerHTML = rowContent;
-
     row.querySelectorAll('.covers-item').forEach((item, index) => {
       setTimeout(() => {
         item.classList.add('visible');
       }, index * 100);
     });
   }
-
   rows.forEach((row, index) => {
     addImagesToRow(row, coversImages, index === 0);
   });
-
   const coversSection = document.querySelector('.covers-gallery');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -83,6 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
   observer.observe(coversSection);
 });
+
+
+
+
+
+
+
+
+
