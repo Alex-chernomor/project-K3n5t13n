@@ -12,7 +12,7 @@
 
 .footer-container {
     position: relative;
-    background-image: url('/src/img/imgPNG/elements@1x.png');
+/*     background-image: url('/src/img/imgPNG/elements@1x.png'); */
 }
 .footer-title {
     display: flex;
