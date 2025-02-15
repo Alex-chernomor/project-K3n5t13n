@@ -5,35 +5,18 @@
     padding: 0 !important;
 }
 
-.covers {
-    position: relative;
-    height: 960px;
-    width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .covers {
-        height: 508px;
-    }
-}
-
 .covers-box {
     background-image: url('../img/imgJPEG/coversImg/covers-bg@1x.png');
     backdrop-filter: blur(10px);
     overflow: hidden;
     margin: auto;
+/*     max-width: 375px; */
+    height: 508px;
     background-position: center;
     background-size: cover;
     overflow: hidden;
     padding: 0px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
-
 
 @media (min-resolution: 192dpi) {
     .covers-box {
@@ -44,8 +27,8 @@
 @media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .covers-box {
         background-image: url('../img/imgJPEG/coversImg/covers-bg@2x.png');
+        width: 768px;
         height: 960px;
-        width: 100%;
     }
 
     .covers-box.container {
@@ -56,6 +39,8 @@
 
 @media only screen and (min-width: 1440px) {
     .covers-box {
+        /* background-color: #fff; */
+        width: 1440px;
         height: 960px;
         margin: auto;
     }
@@ -73,7 +58,7 @@
     flex-direction: column;
     position: relative;
     top: -120px;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 
 .covers-item {

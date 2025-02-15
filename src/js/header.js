@@ -47,10 +47,29 @@ const onclickBtn = () =>{
     toggleClass(menuCont,'is-hidden');
     toggleClass(burgerSVG,'is-hidden');
     toggleClass(closeSVG,'is-hidden');
-    toggleClass(menuMobCont,'menu-div-is-open');
+    // toggleClass(menuMobCont, 'menu-div-is-open');
+
+    // toggleMenu(); 
+}
+
+function toggleMenu() {
+    const body = document.body;
+    
+  // Блокуємо / розблокуємо скрол сторінки
+  if (menuMobCont.classList.contains("menu-div-is-open")) {
+    body.classList.add("no-scroll");
+  } else {
+    body.classList.remove("no-scroll");
+    }  
 }
 
 
+const onCkickBrgBtn = () =>{
+
+    toggleClass(menuMobCont, 'menu-div-is-open');
+
+    toggleMenu(); 
+}
 
 
 addAnkorTemplate(createAnkorTemplate(ankorArr));
@@ -58,5 +77,5 @@ addImg(logoContainer, createImg(logoImg,'img-logo'));
 
 menuBtn.addEventListener('click', onclickBtn);
 burgerMenuBtn.addEventListener('click',onclickBtn);
+burgerMenuBtn.addEventListener('click',onCkickBrgBtn);
 menuCont.addEventListener('click',onclickBtn )
-

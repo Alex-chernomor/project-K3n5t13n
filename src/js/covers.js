@@ -12,6 +12,7 @@ import coversImg10 from '../img/imgJPEG/coversImg/coversImg10.jpg';
 
 document.addEventListener('DOMContentLoaded', () => {
   const coversImages = [
+
     { src: coversImg1, alt: 'PowerPulse' },
     { src: coversImg2, alt: 'MIMINO' },
     { src: coversImg3, alt: 'Ukrainian Art' },
@@ -22,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: coversImg8, alt: 'fruitbox' },
     { src: coversImg9, alt: 'englishexcellence' },
     { src: coversImg10, alt: 'StarlightStudio' }
-  ];
+    ];
 
   const rows = [1, 2, 3, 4].map(n => document.getElementById(`row${n}`));
 
   function createCoverItem({ src, alt }) {
+
     return `
       <li class="covers-item">
         <a class="covers-link" href="${src}">
@@ -36,37 +38,47 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
+
+    coverLink.appendChild(coverImage);
+    coverItem.appendChild(coverLink);
+
+    return coverItem;
+  }
+  
+  function addVisibleClassWithDelay(element, delay = 100) {
+    setTimeout(() => {
+      element.classList.add('visible');
+    }, delay);
+  }
+  
   function addImagesToRow(row, images, isOrdered) {
     let usedImages = [];
-    let rowContent = '';
 
     if (isOrdered) {
       images.forEach(image => {
-        rowContent += createCoverItem(image);
+        const coverItem = createCoverItem(image);
+        row.appendChild(coverItem);
+        addVisibleClassWithDelay(coverItem);
       });
     } else {
       const shuffledImages = [...images].sort(() => 0.5 - Math.random());
 
       shuffledImages.forEach(image => {
         if (usedImages.includes(image.src)) return;
-
-        rowContent += createCoverItem(image);
-        usedImages.push(image.src);
+  
+        const coverItem = createCoverItem(image);
+        row.appendChild(coverItem);
+        addVisibleClassWithDelay(coverItem);
+        usedImages.push(image.src)
       });
-
+     
       usedImages.forEach(src => {
         if (usedImages.includes(src)) return;
-        rowContent += createCoverItem({ src, alt: '' });
+        const coverItem = row.firstChild.cloneNode(true);
+        row.appendChild(coverItem);
+        addVisibleClassWithDelay(coverItem);
       });
     }
-
-    row.innerHTML = rowContent;
-
-    row.querySelectorAll('.covers-item').forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.add('visible');
-      }, index * 100);
-    });
   }
 
   rows.forEach((row, index) => {
@@ -84,5 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  
+
   observer.observe(coversSection);
+
 });
+

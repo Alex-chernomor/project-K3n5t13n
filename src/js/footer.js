@@ -4,25 +4,31 @@ import { addImg } from "./header";
 
 addImg(document.querySelector('.footer-title-fl'), createImg(logoImg,'img-logo'));
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("formfield");
   const modal = document.getElementById("modal");
   const closeModalBtn = document.querySelector(".close-modal");
+  
+  function toggleMenu() {
+    const body = document.body; 
+    body.classList.toggle("no-scroll");
+
+}
+
+
+
 
   form.addEventListener("submit", function (event) {
     event.preventDefault(); 
-
-   
+    
     modal.classList.remove("is-hidden");
+  toggleMenu()
+  form.reset();
   });
 
-  form.reset();
   
   closeModalBtn.addEventListener("click", function () {
+    toggleMenu()
     modal.classList.add("is-hidden");
   });
 
@@ -39,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 
 
 

@@ -1,5 +1,5 @@
 header{
-    margin: 0;
+    margin-top: 32px;
     position: absolute;
     z-index: 20;
     display: flex;
@@ -79,7 +79,7 @@ text-align: center;
   }
  .order-button{
     white-space: nowrap;
-    background: none;
+    background: #ed3b44;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
     padding: 18px 24px 18px 24px;
@@ -95,6 +95,11 @@ text-align: center;
     background: #E0373F;
  }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
 
  .menu-burger-button{
     padding: 0;
@@ -112,7 +117,7 @@ text-align: center;
     cursor:default;
  }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 200px) and (max-width: 767px) {
 
 .menu-button{
     display: none;
@@ -168,7 +173,9 @@ text-align: center;
 }
 
 .menu-div-is-open{
-    position: fixed; 
+    position: absolute;
+    /* position: fixed;  */
+    
     display: flex;
     overflow: hidden;
     top: 0; 
@@ -185,6 +192,7 @@ text-align: center;
 }
 
 
+
 .menu-cont{
     display: flex;
     justify-content: center;
@@ -195,7 +203,7 @@ text-align: center;
 .order-button-2 {
     position: absolute; 
     bottom: 64px;   
-
+    background: #ed3b44;
 }
 }
 
@@ -210,8 +218,7 @@ text-align: center;
         display: block;
     }
 
-    
-    .order-button{
+.order-button{
         display: block;
     }
     .burger-whipe {

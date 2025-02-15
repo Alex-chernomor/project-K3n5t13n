@@ -19,7 +19,7 @@ const projectsArr = [
 const projectList = document.querySelector('.projects-list');
 const createProjectEl = obj => {
   return `
-    <div class='project-link-container'>
+    <li class='project-link-container'>
         <div class='proj-link-container'>
             <ul class='skill-proj-list'>
                 <li class = 'skill-proj-link'>#react</li>
@@ -33,7 +33,7 @@ const createProjectEl = obj => {
         <div class='project-image-link-cont'>
             <img class = 'project-image'src="${obj.img}" alt="${obj.projectName}">
         </div>
-    </div>
+    </li>
     `;
 };
 const createProjectTemplate = arr =>
