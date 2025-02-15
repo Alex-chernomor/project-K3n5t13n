@@ -47,9 +47,9 @@ const onclickBtn = () =>{
     toggleClass(menuCont,'is-hidden');
     toggleClass(burgerSVG,'is-hidden');
     toggleClass(closeSVG,'is-hidden');
-    toggleClass(menuMobCont, 'menu-div-is-open');
+    // toggleClass(menuMobCont, 'menu-div-is-open');
 
-    toggleMenu(); 
+    // toggleMenu(); 
 }
 
 function toggleMenu() {
@@ -64,9 +64,18 @@ function toggleMenu() {
 }
 
 
+const onCkickBrgBtn = () =>{
+
+    toggleClass(menuMobCont, 'menu-div-is-open');
+
+    toggleMenu(); 
+}
+
+
 addAnkorTemplate(createAnkorTemplate(ankorArr));
 addImg(logoContainer, createImg(logoImg,'img-logo'));
 
 menuBtn.addEventListener('click', onclickBtn);
 burgerMenuBtn.addEventListener('click',onclickBtn);
+burgerMenuBtn.addEventListener('click',onCkickBrgBtn);
 menuCont.addEventListener('click',onclickBtn )
