@@ -9,6 +9,7 @@ import coversImg8 from '../img/imgJPEG/coversImg/coversImg8.jpg';
 import coversImg9 from '../img/imgJPEG/coversImg/coversImg9.jpg';
 import coversImg10 from '../img/imgJPEG/coversImg/coversImg10.jpg';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const coversImages = [
 
@@ -27,19 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const rows = [1, 2, 3, 4].map(n => document.getElementById(`row${n}`));
 
   function createCoverItem({ src, alt }) {
-    const coverItem = document.createElement('li');
-    coverItem.className = 'covers-item';
 
-    const coverLink = document.createElement('a');
-    coverLink.className = 'covers-link';
-    coverLink.href = src;
+    return `
+      <li class="covers-item">
+        <a class="covers-link" href="${src}">
+          <img class="covers-image" src="${src}" srcset="${src} 1x, ${src.replace('.jpg', '@2x.jpg')} 2x" alt="${alt}" loading="lazy">
+        </a>
+      </li>
+    `;
+  }
 
-    const coverImage = document.createElement('img');
-    coverImage.className = 'covers-image';
-    coverImage.src = src;
-    coverImage.srcset = `${src} 1x, ${src.replace('.jpg', '@2x.jpg')} 2x`;
-    coverImage.alt = alt;
-    coverImage.loading = 'lazy';
 
     coverLink.appendChild(coverImage);
     coverItem.appendChild(coverLink);
@@ -101,4 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   observer.observe(coversSection);
+
 });
+
