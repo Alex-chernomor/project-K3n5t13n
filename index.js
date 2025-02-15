@@ -43,7 +43,7 @@ import"./assets/vendor-BfW2lO3I.js";(function(){const t=document.createElement("
         <a class="link" href="${t.url}" target="_blank">${t.name}</a>
     </li>
 `).join("");ne.innerHTML=re(oe);const ie="/project-K3n5t13n/assets/projectImg1-DJe22lFz.jpg",ae="/project-K3n5t13n/assets/projectImg2-BdEXOc0P.jpg",ce="/project-K3n5t13n/assets/projectImg3-BBaqWZx3.jpg",le=[{projectName:"Programming Across Borders: Ideas, Technologies, Innovations",img:ie},{projectName:"Programming Across Borders: Ideas, Technologies, Innovations",img:ae},{projectName:"Programming Across Borders: Ideas, Technologies, Innovations",img:ce}],de=document.querySelector(".projects-list"),ue=e=>`
-    <div class='project-link-container'>
+    <li class='project-link-container'>
         <div class='proj-link-container'>
             <ul class='skill-proj-list'>
                 <li class = 'skill-proj-link'>#react</li>
@@ -57,7 +57,7 @@ import"./assets/vendor-BfW2lO3I.js";(function(){const t=document.createElement("
         <div class='project-image-link-cont'>
             <img class = 'project-image'src="${e.img}" alt="${e.projectName}">
         </div>
-    </div>
+    </li>
     `,pe=e=>e.map(t=>ue(t)).join(""),me=e=>de.insertAdjacentHTML("beforeend",e);me(pe(le));const ge=document.querySelector(".right-arrow-prjct"),Ae=document.querySelector(".left-arrow-prjct");Ae.setAttribute("href",`${m}#arrowLeft`);ge.setAttribute("href",`${m}#arrowRight`);document.addEventListener("DOMContentLoaded",async()=>{const e=document.getElementById("reviews-list"),t=document.getElementById("error-message"),r=document.querySelector(".swiper-button-prev"),o=document.querySelector(".swiper-button-next"),s=document.querySelector(".button_pointer");if(!e||!t||!r||!o||!s){console.error("Не найдены необходимые элементы");return}try{const n=await fetch("https://portfolio-js.b.goit.study/api/reviews");if(!n.ok)throw new Error("Failed to fetch reviews");const c=await n.json();if(!Array.isArray(c)||c.length===0)throw new Error("No reviews found");e.innerHTML=c.map(a=>`
                 <li class="swiper-slide">
                     <img src="${a.avatar_url}" alt="${a.author}" class="review-avatar">
