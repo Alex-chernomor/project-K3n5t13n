@@ -10,13 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeModalBtn = document.querySelector(".close-modal");
   
   function toggleMenu() {
-    const body = document.body;
-    
-  if (menuMobCont.classList.contains("menu-div-is-open")) {
-    body.classList.add("no-scroll");
-  } else {
-    body.classList.remove("no-scroll");
-    }  
+    const body = document.body; 
+    body.classList.toggle("no-scroll");
+
 }
 
 
