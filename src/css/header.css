@@ -1,5 +1,4 @@
 header{
-    /* margin: 0; */
     margin-top: 32px;
     position: absolute;
     z-index: 20;
@@ -118,7 +117,7 @@ text-align: center;
     cursor:default;
  }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 200px) and (max-width: 767px) {
 
 .menu-button{
     display: none;
