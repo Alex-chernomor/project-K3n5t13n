@@ -80,7 +80,6 @@ text-align: center;
   }
  .order-button{
     white-space: nowrap;
-    /* background: none; */
     background: #ed3b44;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
@@ -98,7 +97,7 @@ text-align: center;
  }
 
 .no-scroll {
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100%;
     width: 100%;
 }
