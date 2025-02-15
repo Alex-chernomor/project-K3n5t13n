@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); 
     
     modal.classList.remove("is-hidden");
+  toggleMenu()
   form.reset();
   });
 
-  toggleMenu()
   
   closeModalBtn.addEventListener("click", function () {
     toggleMenu()
