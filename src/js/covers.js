@@ -9,6 +9,7 @@ import coversImg8 from '../img/imgJPEG/coversImg/coversImg8.jpg';
 import coversImg9 from '../img/imgJPEG/coversImg/coversImg9.jpg';
 import coversImg10 from '../img/imgJPEG/coversImg/coversImg10.jpg';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const coversImages = [
     { src: coversImg1, alt: 'PowerPulse' },
@@ -28,10 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function createCoverItem({ src, alt }) {
     return `
       <li class="covers-item">
-        <picture>
-          <source srcset="${src.replace('.jpg', '@2x.jpg')} 2x">
-          <img class="covers-image" src="${src}" alt="${alt}" loading="lazy">
-        </picture>
+        <a class="covers-link" href="${src}">
+          <img class="covers-image" src="${src}" srcset="${src} 1x, ${src.replace('.jpg', '@2x.jpg')} 2x" alt="${alt}" loading="lazy">
+        </a>
       </li>
     `;
   }
@@ -86,4 +86,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(coversSection);
 });
-
