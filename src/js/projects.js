@@ -1,5 +1,5 @@
 import projectImgOne from '../img/imgJPEG/projectImg/projectImg1.jpg';
-import projectImgTwo from  '../img/imgJPEG/projectImg/projectImg2.jpg';
+import projectImgTwo from '../img/imgJPEG/projectImg/projectImg2.jpg';
 import projectImgThree from '../img/imgJPEG/projectImg/projectImg3.jpg';
 import pathBtn from '../img/imgSVG/sprite.svg';
 const projectsArr = [
@@ -47,3 +47,25 @@ const leftButnnProj = document.querySelector('.left-arrow-prjct');
 
 leftButnnProj.setAttribute('href', `${pathBtn}#arrowLeft`);
 rightButnnProj.setAttribute('href', `${pathBtn}#arrowRight`);
+
+const rightButton = document.querySelector('.button-right-proj');
+const leftButton = document.querySelector('.button-left-proj');
+const link = document.querySelector('.project-link-container');
+
+let position = 0;
+let counter = 1;
+
+rightButton.addEventListener('click', () => {
+  if (counter < projectsArr.length) {
+    position -= link.offsetWidth;
+    counter += 1;
+    projectList.style.transform = `translateX(${position}px)`;
+  }
+});
+leftButton.addEventListener('click', () => {
+  if (counter > 1) {
+    position += link.offsetWidth;
+    counter -= 1;
+    projectList.style.transform = `translateX(${position}px)`;
+  }
+});

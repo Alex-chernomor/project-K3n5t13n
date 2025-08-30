@@ -102,41 +102,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createCards();
 
-  const containerTwo = document.querySelector('.skills-slider-about-me');
+  // const containerTwo = document.querySelector('.skills-slider-about-me');
 
-  const swipeContainer = document.createElement('div');
-  swipeContainer.classList.add('swipe-about-me');
+  // const swipeContainer = document.createElement('div');
+  // swipeContainer.classList.add('swipe-about-me');
 
-  const skillsArr = [
-    'HTML/CSS',
-    'JavaScript',
-    'React',
-    'Node.js',
-    'React Native',
-    'Soft skills',
-  ];
+  // const skillsArr = [
+  //   'HTML/CSS',
+  //   'JavaScript',
+  //   'React',
+  //   'Node.js',
+  //   'React Native',
+  //   'Soft skills',
+  // ];
 
-  const skillsList = document.createElement('ul');
-  skillsList.classList.add('skills-list-about-me');
+  // const skillsList = document.createElement('ul');
+  // skillsList.classList.add('skills-list-about-me');
 
-  const createSkill = str => {
-    return `
-    <li class='skills-link-about-me'>
-        <p class='skill-p-about-me'>${str}</p>
-    </li>
-    `;
-  };
-  const createSkillTemplate = arr => arr.map(el => createSkill(el)).join('');
+  // const createSkill = str => {
+  //   return `
+  //   <li class='skills-link-about-me'>
+  //       <p class='skill-p-about-me'>${str}</p>
+  //   </li>
+  //   `;
+  // };
+  // const createSkillTemplate = arr => arr.map(el => createSkill(el)).join('');
 
-  skillsList.innerHTML = createSkillTemplate(skillsArr);
+  // skillsList.innerHTML = createSkillTemplate(skillsArr);
 
-  swipeContainer.appendChild(skillsList);
+  // swipeContainer.appendChild(skillsList);
 
-  const nextButton = document.createElement('div');
-  nextButton.classList.add('swipe-button-next-about-me');
-  nextButton.innerHTML = `<svg width='40px' height='40px'><use href='${pathArrow}#arrowRight'></use></svg>`;
+  // const nextButton = document.createElement('div');
+  // nextButton.classList.add('swipe-button-next-about-me');
+  // nextButton.innerHTML = `<svg width='40px' height='40px'><use href='${pathArrow}#arrowRight'></use></svg>`;
 
-  swipeContainer.appendChild(nextButton);
+  // swipeContainer.appendChild(nextButton);
 
-  containerTwo.appendChild(swipeContainer);
+  // containerTwo.appendChild(swipeContainer);
 });
