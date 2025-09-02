@@ -140,3 +140,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // containerTwo.appendChild(swipeContainer);
 });
+
+const swipeAboutMe = new Swiper('.swipe-about-me', {
+  loop: true,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  navigation: {
+    nextEl: '.swipe-button-next-about-me',
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});
